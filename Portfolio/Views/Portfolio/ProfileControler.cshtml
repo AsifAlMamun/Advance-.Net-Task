@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "ProfileControler";
+}
+<div>
+    <a href="/">Home</a>
+    <a href="/Portfolio/ProfileControler">Profile</a>
+    <a href="/Portfolio/Education">Education</a>
+    <a href="/Portfolio/Projects">Projects</a>
+    <a href="/Portfolio/References">References</a>
+</div>
+<h2>Profile</h2>
+
+
+<table class="table table-bordered">
+    <tr>
+        <td>Name</td>
+        <td>@Model.Name</td>
+
+    </tr>
+    <tr>
+        <td>Date of Birth</td>
+        <td> @Model.Dob</td>
+
+
+
+    </tr>
+    <tr>
+        <td>Nationality</td>
+        <td> @Model.Nationality</td>
+
+
+
+    </tr>
+    <tr>
+        <td>Blood group</td>
+        <td> @Model.BGroup</td>
+
+
+
+    </tr>
+    <tr>
+        <td>Address</td>
+        <td> @Model.Address</td>
+
+
+
+    </tr>
+    <tr>
+        <td>Contact Information</td>
+        <td> @Model.Contact</td>
+
+
+
+    </tr>
+    <tr>
+        <td>Hobbies</td>
+        <td>
+            <ul>
+                @foreach (var item in Model.Hobbies)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        </td>
+    </tr>
+
+
+
+</table>
